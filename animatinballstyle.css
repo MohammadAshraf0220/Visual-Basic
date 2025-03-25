@@ -1,0 +1,67 @@
+body {
+    background:black;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .ball {
+    width: 80px;
+    height: 80px;
+    background:burlywood;
+    border-radius: 50%;
+    animation: boucneAnimation 1s infinite;
+  }
+  
+  @keyframes boucneAnimation {
+    50% {
+      transform: translateY(-100px);
+      animation-timing-function: ease-in;
+    }
+  
+    0%,
+    100% {
+      transform: scaleX(1.2) scaleY(0.7);
+    }
+  
+    97% {
+      transform: scaleX(1);
+    }
+  }
+  
+  .shadow {
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background: rgb(61, 58, 58);
+    border-radius: 50%;
+    animation: shadowAnimation 1s infinite;
+    transform: translateY(22px);
+  }
+  
+  @keyframes shadowAnimation {
+    0%,
+    100% {
+      transform: scaleX(0.7) translateY(22px);
+      opacity: 1;
+    }
+  
+    50% {
+      transform: scaleX(1.2) translateY(22px);
+      animation-timing-function: ease-in-out;
+      opacity: 0.2;
+    }
+  }
